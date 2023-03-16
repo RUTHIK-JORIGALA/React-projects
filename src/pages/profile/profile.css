@@ -1,5 +1,6 @@
 .profile{
     display: flex;
+    width: 100%;
 }
 .profileRight{
     flex: 9;
@@ -36,6 +37,7 @@
 }
 .profileInfoDesc{
     font-weight: 300;
+    margin-bottom: 10px;
 }
 
 .profileRightBottom{

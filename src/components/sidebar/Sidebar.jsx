@@ -3,6 +3,8 @@ import "./sidebar.css"
 import {RssFeed, HelpOutline, WorkOutline,Event, School, Bookmark, Group, PlayCircleFilledOutlined, Chat} from '@mui/icons-material'
 import { Users } from '../../data'
 import CloseFriend from '../closeFriend/CloseFriend'
+import {Link} from 'react-router-dom'
+
 export default function Sidebar() {
   return (
     <div className='sidebar'>
@@ -51,10 +53,12 @@ export default function Sidebar() {
           {
             Users.map((u) => (
               <CloseFriend key={u.id} user={u}/>
-            ))
-          }
+              ))
+            }
           
         </ul>
+          <hr className="sidebarHr" />
+          <Link className='link' to="/login"><p className='logout'>Logout</p></Link>
       </div>
     </div>
   )

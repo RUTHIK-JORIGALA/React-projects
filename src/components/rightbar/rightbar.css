@@ -1,12 +1,21 @@
 .rightbar{
-    flex:3;
-    margin-left: 5px;
+    flex:3;   
 }
 .rightbarWrapper{
     padding: 20px 20px 0 0 ;
     position: sticky;
+    top: 50px;
+    margin-left: 8px;
+    height: calc(100vh - 60px);
     overflow-y: scroll;
+    max-height:inherit;
 }
+.rightbarWrapper::-webkit-scrollbar{
+    display: none;
+}
+
+
+
 .birthdayContainer{
     display: flex;
     align-items: center;

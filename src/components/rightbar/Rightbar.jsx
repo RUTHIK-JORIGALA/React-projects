@@ -5,19 +5,21 @@ import Online from '../online/Online'
 export default function Rightbar({profile}) {
   const HomeRightbar = () =>{
     return(
-        <>
-         <div className="birthdayContainer">
-          <img src="assets/gift.png" alt="" className="birthdayImg" />
-          <span className="birthdayText"><b>Pola Foster</b> and <b>3 other friends</b> have a birthday today</span>
+        <div className='rightbar'>
+          <div className="rightbarWrapper">
+            <div className="birthdayContainer">
+              <img src="assets/gift.png" alt="" className="birthdayImg" />
+              <span className="birthdayText"><b>Pola Foster</b> and <b>3 other friends</b> have a birthday today</span>
+            </div>
+            <img className="rightbarAd" src="https://img.freepik.com/free-vector/man-using-laptop-cartoon_1308-120757.jpg?w=740&t=st=1678242715~exp=1678243315~hmac=17d0d2c3d274082d37463c7742810a0ad7c03735b3229a4320746e617208d553" alt="" />
+            <h4 className="rightbarTitle">Online Friends</h4>
+            <ul className="rightbarFriendList">
+              {Users.map((u)=>(
+                <Online key={u.id} user={u} />
+              ))}
+            </ul>
+          </div>
         </div>
-        <img src="assets/ad.png" alt="" className="rightbarAd" />
-        <h4 className="rightbarTitle">Online Friends</h4>
-        <ul className="rightbarFriendList">
-          {Users.map((u)=>(
-            <Online key={u.id} user={u} />
-          ))}
-        </ul>
-        </>
     )
   }
 
